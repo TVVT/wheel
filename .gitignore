@@ -1,0 +1,8 @@
+#public js
+app/bower_components/*
+
+#temp files
+*.DS_Store
+
+
+
