@@ -1,16 +1,17 @@
 <!-- index.html -->
 <!doctype html>
-<html lang="en" ng-app="wheel">
+<html lang="zh-CN" ng-app="wheelApp">
 <head>
-...
+  <meta charset="utf-8">
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-route/angular-route.js"></script>
-  <script src="js/app.js"></script>
-  <script src="js/controllers.js"></script>
+  <link rel="stylesheet/less" type="text/css" href="style/style.less" />
+  <script src="bower_components/less/dist/less-1.7.5.min.js"></script>
+  <script src="scripts/app.js"></script>
+  <script src="scripts/controllers.js"></script>
 </head>
 <body>
-
-  <div ng-view></div>
-
+    <header> <h1><a ng-href="#/sliders">YHD 微信幻灯片</a><sub><a href="">by TvvT</a></sub></h1> </header>
+    <div ng-view class="container"></div>
 </body>
 </html>

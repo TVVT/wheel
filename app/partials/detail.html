@@ -1,0 +1,35 @@
+<div class="detail">
+
+    <div class="l">
+        <div class="content">
+            <ul>
+                <li ng-repeat="page in pages" ng-click="select($index)" ng-class="{selected : selected === $index}">
+                    {{$index+1}}
+                </li>
+            </ul>
+        </div>
+        <div class="bottom" ng-click="addPage()">+</div>
+    </div>
+    <div class="r">
+        <div class="content">
+            <div class="page" ng-repeat="page in pages" ng-show="selected === $index" ng-style="page.style"> {{$index}}</div>
+        </div>
+
+        <div class="options">
+            <ul>
+                <li ng-show="turns"> 
+                    <span>翻页效果：</span>
+                    <select ng-model="myTurns" ng-options="turn.name  for turn in turns" ></select>
+                </li>
+                <li>
+                    <span>背景：</span>
+                    <input type="color" ng-model="pages[selected].style.backgroundColor">
+                    <br/>
+                    <input type="file" accept="image/*" id="file" >
+                    <label for="file"> add a image!!!</label>
+                </li>
+            </ul>
+            <button>添加元素</button>
+        </div>
+    </div>
+</div>
